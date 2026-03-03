@@ -1,0 +1,36 @@
+meta {
+  name: createJob
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/firm/job/:firmId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  firmId: 108
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+               "employmentType" : "fulltime",
+              "title": "backend developer2",
+              "description":"developer new",
+              "location": "karachi",
+              "salaryMin": "100000" ,
+              "salaryMax": "120000",
+              "status": "published",
+              "workplaceType" : "remote"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

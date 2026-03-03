@@ -1,0 +1,29 @@
+meta {
+  name: updateNewsStatus
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/admin/news/:id/update-status
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 9a731bf7-7b79-4865-b4c3-674cdffd9b73
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+      "newsStatus" : "unpublished"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

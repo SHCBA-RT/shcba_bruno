@@ -1,0 +1,33 @@
+meta {
+  name: updateEducation
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/user/education/update/:id
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "instituteName": "KU",
+      "qualification": "Law",
+      "startDate": "2011-01-01",
+      "endDate": "2015-12-31",
+      "description": "Studied law and graduated with honors. (Test)"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

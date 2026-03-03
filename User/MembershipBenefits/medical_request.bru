@@ -1,0 +1,38 @@
+meta {
+  name: medical_request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/membership/benefits/medical
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  ~limit: null
+  ~page: null
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:multipart-form {
+  patientName: abc
+  relation: father
+  hospitalName: abcd
+  treatmentType: abc
+  treatmentDate: 12/12/12
+  amountClaimed: 2000
+  description: 
+  isReimbursement: sss
+  notes: sss
+  documents: @file(/home/bilal-zia/Documents/BSK-Server/BSK-TV-NETWORK/documentation/BackendFeatures.pdf)
+  ~isReimbursement: 
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: getAreaOfExpertise
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/user/specialities/
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

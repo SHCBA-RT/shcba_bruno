@@ -1,0 +1,27 @@
+meta {
+  name: scoreApplicant
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId/applicants/:applicantId/score
+  body: json
+  auth: inherit
+}
+
+params:path {
+  firmId: 64
+  jobId: 2
+  applicantId: 2
+}
+
+body:json {
+  {
+      "score" : "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

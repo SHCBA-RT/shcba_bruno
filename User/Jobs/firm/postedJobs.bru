@@ -1,0 +1,19 @@
+meta {
+  name: postedJobs
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/user/firm/job/:firmId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 64
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,27 @@
+meta {
+  name: createAchievement
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/achievements/create
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:multipart-form {
+  achievementTitle:  Excellence in Corporate Law Test
+  achievementDate:  2022-06-18
+  description:  Recognized for outstanding contribution in high-value corporate litigation and advisory matters.
+  issuer:  Pakistan Bar Council
+  image: @file(/C:/Users/E14/Downloads/testing image.png)
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,28 @@
+meta {
+  name: education_request
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/user/membership/benefits/education
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:multipart-form {
+  childName: abc
+  childDob: 12/12/12
+  schoolName: abcSchool
+  classGrade: 2
+  amountClaimed: 10000
+  documents: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-20 14-02-56.png)
+}
+
+settings {
+  encodeUrl: true
+}

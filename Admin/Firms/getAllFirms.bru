@@ -1,0 +1,27 @@
+meta {
+  name: getAllFirms
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/admin/firms
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~organizationName: Doe
+  ~email: johndoe@firm.com
+  ~status: active
+  ~page: 5
+  ~limit: 10
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: travelRequests
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/admin/membership/benefits/travel
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

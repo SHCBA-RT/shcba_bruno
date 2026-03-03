@@ -1,0 +1,30 @@
+meta {
+  name: createExperience
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/experience/create
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "firmName": "Justice & Co. Law Firm TEST",
+    "jobTitle": "Junior Advocate",
+    "startDate": "2017-06-01",
+    "endDate": "2019-12-31",
+    "jobDescription": "Assisted senior lawyers, prepared case summaries, managed client communication, and attended court hearings."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

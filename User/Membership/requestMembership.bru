@@ -1,0 +1,29 @@
+meta {
+  name: requestMembership
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/user/memberships/request-membership
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "shcbaNo": "SHCBA-1234",  // optional
+    "validFrom": "2025-01-01", // required if shcbaNo is provided
+    "validTo": "2025-12-31",   // required if shcbaNo is provided
+    "description": "Requesting membership"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

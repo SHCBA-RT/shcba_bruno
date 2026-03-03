@@ -1,0 +1,23 @@
+meta {
+  name: getNewsById
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/admin/news/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 47969b1a-452f-4268-9ca4-b9a9f5e259e3
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

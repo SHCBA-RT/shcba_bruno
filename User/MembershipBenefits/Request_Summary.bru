@@ -1,0 +1,19 @@
+meta {
+  name: Request_Summary
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/membership/benefits/summary
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

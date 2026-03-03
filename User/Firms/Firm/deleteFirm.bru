@@ -1,0 +1,19 @@
+meta {
+  name: deleteFirm
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm/:id/delete
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 148
+}
+
+settings {
+  encodeUrl: true
+}

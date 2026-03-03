@@ -1,0 +1,33 @@
+meta {
+  name: updateExperience
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/user/experience/:id/update
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "jobTitle": "Senior Associate",
+    "firmName": "Global Legal Group",
+    "startDate": "2021-02-10",
+    "jobDescription": "Promoted to lead litigation associate (Test)."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

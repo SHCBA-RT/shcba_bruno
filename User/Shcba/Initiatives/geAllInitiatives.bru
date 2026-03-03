@@ -1,0 +1,19 @@
+meta {
+  name: geAllInitiatives
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/user/shcba/initiatives/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

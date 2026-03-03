@@ -1,0 +1,39 @@
+meta {
+  name: getAllAdvocates
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/advocate/advocates
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~q: Annalise D'Amore
+  ~city: Pittsfield
+  ~page: 2
+  ~expertise: 2
+  ~sort: most_recent
+  ~sort: most_viewed
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+  //   "q": "ali"
+  //   "city": "Pittsfield"
+  //   "expertise": "1,3,5"
+    "sort": "",
+    "orderBy": "desc"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

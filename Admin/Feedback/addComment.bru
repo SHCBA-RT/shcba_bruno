@@ -1,0 +1,21 @@
+meta {
+  name: addComment
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/admin/feedback/3/comment
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "comment": ""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

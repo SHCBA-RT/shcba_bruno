@@ -1,0 +1,28 @@
+meta {
+  name: membershipRenewalRequest
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/user/memberships/renewal-request
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "membershipId": 17,
+    "validFrom": "2025-11-30",
+    "validTo": "2026-11-30",
+    "description": "Please renew my membership"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

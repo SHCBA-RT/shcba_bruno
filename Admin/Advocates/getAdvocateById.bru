@@ -1,0 +1,23 @@
+meta {
+  name: getAdvocateById
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/admin/advocates/:advocateId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  advocateId: 194
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: reviewMembership
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/admin/membership/requests/5/review
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+body:json {
+  {
+      "action": "rejected",
+      "validFrom" : "2026-01-09",
+      "validTo" : "2026-12-31 ",
+      "status":"granted",
+      "shcbaNo": "123090"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

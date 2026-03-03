@@ -1,0 +1,35 @@
+meta {
+  name: updateProfile
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/api/admin/advocates/:id/update-profile
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 172
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+      "adminId": 2,
+      "firstName": "Bilal",
+      "lastName": "Khan",
+      "email": "bilal.khan8@example.com",
+      "phoneNumber": "03114567890",
+      "sbcEnrollmentNo": "SBC-2024-092"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

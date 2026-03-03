@@ -1,0 +1,23 @@
+meta {
+  name: getFirmById
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/admin/firms/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

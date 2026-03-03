@@ -1,0 +1,19 @@
+meta {
+  name: getProfile
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/advocate/advocates/profile
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

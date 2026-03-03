@@ -1,0 +1,23 @@
+meta {
+  name: getNewsById
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostUrl}}/api/user/news/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

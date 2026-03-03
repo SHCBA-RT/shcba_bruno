@@ -1,0 +1,23 @@
+meta {
+  name: hardDeleteNews
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/api/admin/news/:id/delete
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: a547f48e-4233-4fba-b2b7-8860d05ac2d4
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

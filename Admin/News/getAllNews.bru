@@ -1,0 +1,27 @@
+meta {
+  name: getAllNews
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/admin/news/?page=2
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 2
+  ~limit: 20
+  ~type: Notice
+  ~search: Adficio
+  ~sort: views
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

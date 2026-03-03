@@ -1,0 +1,19 @@
+meta {
+  name: firmApplications
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/admin/application/firmApplications
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

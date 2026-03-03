@@ -1,0 +1,23 @@
+meta {
+  name: createAdmin
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/admin/admin/register
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "email": "admin@shcba.com",
+      "password": "12345678",
+      "roleId": "1"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

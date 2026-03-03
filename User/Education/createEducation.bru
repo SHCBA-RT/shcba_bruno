@@ -1,0 +1,30 @@
+meta {
+  name: createEducation
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/education/create
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "instituteName": "University of Karachi Test",
+    "qualification": "BBA",
+    "startDate": "2010-01-01",
+    "endDate": "2014-12-31",
+    "description": "Studied BBA."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

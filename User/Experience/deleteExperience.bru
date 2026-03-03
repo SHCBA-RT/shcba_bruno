@@ -1,0 +1,23 @@
+meta {
+  name: deleteExperience
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/user/experience/:id/delete
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: educationRequests
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/admin/membership/benefits/education
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

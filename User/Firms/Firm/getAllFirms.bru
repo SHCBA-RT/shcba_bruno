@@ -1,0 +1,35 @@
+meta {
+  name: getAllFirms
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/firm/firms/all
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~page: 6
+  ~limit: 5
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "q": "East"
+      // "expertise": [2],
+      // "limit": "5",
+      // "page": 3
+      // "sort": "most_recent"
+      // "orderBy" : ""  
+  }
+}
+
+settings {
+  encodeUrl: true
+}

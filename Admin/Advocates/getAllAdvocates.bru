@@ -1,0 +1,27 @@
+meta {
+  name: getAllAdvocates
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{hostUrl}}/api/admin/advocates
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~email: gmail.com
+  ~status: active
+  ~sbcEnrollmentNo: SBC1234
+  ~page: 2
+  ~limit: 5
+}
+
+auth:bearer {
+  token: {{
+}
+
+settings {
+  encodeUrl: true
+}

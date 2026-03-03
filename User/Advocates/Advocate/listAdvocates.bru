@@ -1,0 +1,30 @@
+meta {
+  name: listAdvocates
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/advocate/advocates/list
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~page: 2
+  ~search: Santino
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "search": "Santino"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

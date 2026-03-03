@@ -1,0 +1,24 @@
+meta {
+  name: getAllNotifications
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/user/notifications/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: null
+  ~page: null
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

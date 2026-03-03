@@ -1,0 +1,19 @@
+meta {
+  name: getAchievementsByAdvocateId
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/achievements/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

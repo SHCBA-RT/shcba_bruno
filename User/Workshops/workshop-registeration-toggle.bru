@@ -1,0 +1,25 @@
+meta {
+  name: workshop-registeration-toggle
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/api/admin/workshops/4/registerationToggle
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+body:json {
+  {
+      "status"  : true
+  }
+}
+
+settings {
+  encodeUrl: true
+}

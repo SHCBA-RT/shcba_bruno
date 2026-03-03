@@ -1,0 +1,29 @@
+meta {
+  name: getExperienceByAdvocateId
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/experience/
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:text {
+  {
+    "jobTitle": "Senior Associate",
+    "firmName": "Global Legal Group",
+    "startDate": "2021-02-10",
+    "jobDescription": "Promoted to lead litigation associate (Test)."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: jobs_listing
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{hostUrl}}/api/user/advocate/job
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

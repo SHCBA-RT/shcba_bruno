@@ -1,0 +1,19 @@
+meta {
+  name: getMembershipStatus
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/user/memberships/status
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,25 @@
+meta {
+  name: logout
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/api/user/auth/logout
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "token":""
+  }
+}
+
+settings {
+  encodeUrl: true
+}

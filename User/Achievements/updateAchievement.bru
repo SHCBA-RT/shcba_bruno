@@ -1,0 +1,28 @@
+meta {
+  name: updateAchievement
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/user/achievements/:id/update
+  body: multipartForm
+  auth: bearer
+}
+
+params:path {
+  id: 3
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:multipart-form {
+  description:  Updated description for the achievement,
+  image: @file(/C:/Users/E14/Downloads/testing image 2.png)
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,19 @@
+meta {
+  name: medicalRequests
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/admin/membership/benefits/medical
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

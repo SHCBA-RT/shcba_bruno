@@ -1,0 +1,29 @@
+meta {
+  name: getAllJobs
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/admin/job/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~limit: 1
+  ~page: 1
+  ~q: dev
+  ~status: closed
+  ~workplaceType: onsite
+  ~sort: createdAt:asc
+  ~sort: id:asc
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

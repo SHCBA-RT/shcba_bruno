@@ -1,0 +1,23 @@
+meta {
+  name: getApplicationById
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/admin/application/:id
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 3
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

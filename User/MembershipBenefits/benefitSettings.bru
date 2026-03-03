@@ -1,0 +1,15 @@
+meta {
+  name: benefitSettings
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/user/membership/benefits/settings
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

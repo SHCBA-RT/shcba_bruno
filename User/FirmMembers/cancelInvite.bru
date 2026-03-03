@@ -1,0 +1,25 @@
+meta {
+  name: cancelInvite
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm-member/cancelInvite
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "inviteId": 6
+  }
+}
+
+settings {
+  encodeUrl: true
+}

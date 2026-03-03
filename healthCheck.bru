@@ -1,0 +1,15 @@
+meta {
+  name: healthCheck
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://142.93.218.52:3000/health-check
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

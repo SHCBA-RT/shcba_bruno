@@ -1,0 +1,19 @@
+meta {
+  name: checkAuth
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/user/auth/check-auth
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

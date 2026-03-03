@@ -1,0 +1,36 @@
+meta {
+  name: updateJob
+  type: http
+  seq: 6
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId
+  body: json
+  auth: bearer
+}
+
+params:path {
+  firmId: 111
+  jobId: 8
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "employmentType": "fulltime",
+      "description": "developer new",
+      "location": "karachi",
+      "salaryMin": "100000",
+      "salaryMax": "12000",
+      "status": "published",
+      "workplaceType": "remote"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: deleteGalleryItem
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/admin/gallery/1/delete
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

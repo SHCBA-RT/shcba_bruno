@@ -1,0 +1,29 @@
+meta {
+  name: Update_Status
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/api/admin/workshops/:id/status
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+body:json {
+  {
+      "status": "cancelled"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

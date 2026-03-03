@@ -1,0 +1,25 @@
+meta {
+  name: getPendingApplications
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/admin/application?type=firm
+  body: json
+  auth: bearer
+}
+
+params:query {
+  type: firm
+  ~limit: 2
+  ~page: 1
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

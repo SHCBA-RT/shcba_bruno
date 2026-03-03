@@ -1,0 +1,15 @@
+meta {
+  name: requesthistory
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/admin/membership/benefits/requests/history
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

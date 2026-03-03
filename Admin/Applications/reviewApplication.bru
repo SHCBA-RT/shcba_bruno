@@ -1,0 +1,29 @@
+meta {
+  name: reviewApplication
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/api/admin/application/firm/110/review
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+body:json {
+  {
+      "action": "accepted",
+      "validFrom" : "2026-01-09",
+      "validTo" : "2026-12-31 ",
+      "status":"granted",
+      "shcbaNo": "123090"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,15 @@
+meta {
+  name: applied_jobs
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/user/advocate/job/my-applications
+  body: none
+  auth: inherit
+}
+
+settings {
+  encodeUrl: true
+}

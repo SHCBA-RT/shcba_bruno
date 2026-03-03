@@ -1,0 +1,19 @@
+meta {
+  name: myPortfolio
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/user/portfolio/my-portfolio
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

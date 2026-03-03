@@ -1,0 +1,29 @@
+meta {
+  name: transport_request
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/user/membership/benefits/transport
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:multipart-form {
+  fromLocation: abc
+  toLocation: abcd
+  travelDate: 12/12/12
+  transportType: abc
+  purpose: avc
+  expectiedFare: 2000
+  amountClaimed: 20000
+}
+
+settings {
+  encodeUrl: true
+}

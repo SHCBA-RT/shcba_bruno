@@ -1,0 +1,27 @@
+meta {
+  name: UpdateApplicationStatus
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId/applicants/:applicantId/status
+  body: json
+  auth: inherit
+}
+
+params:path {
+  firmId: 111
+  jobId: 8
+  applicantId: 274
+}
+
+body:json {
+  {
+      "status" : "viewed"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

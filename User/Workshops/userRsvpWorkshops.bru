@@ -1,0 +1,24 @@
+meta {
+  name: userRsvpWorkshops
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/workshop/userWorkshops?limit=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  limit: 1
+  ~page: 2
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

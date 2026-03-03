@@ -1,0 +1,19 @@
+meta {
+  name: AssociatedFirms
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/advocate/advocates/associate-firms
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

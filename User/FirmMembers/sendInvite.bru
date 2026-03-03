@@ -1,0 +1,26 @@
+meta {
+  name: sendInvite
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/firm-member/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "firmId": 111,
+      "email": "advocateTesting@100.com"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,23 @@
+meta {
+  name: reportJob
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{baseUrl}}/api/admin/job/firm/:jobId/report
+  body: none
+  auth: bearer
+}
+
+params:path {
+  jobId: 11
+}
+
+auth:bearer {
+  token: {{SupeAdminToken}}
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,26 @@
+meta {
+  name: rsvpWorkshop
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/api/user/workshop/rsvp
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "workshopId": 2
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

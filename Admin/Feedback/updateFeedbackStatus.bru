@@ -1,0 +1,21 @@
+meta {
+  name: updateFeedbackStatus
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/api/admin/feedback/3/status
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "status": "reviewed"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

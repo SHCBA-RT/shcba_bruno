@@ -1,0 +1,35 @@
+meta {
+  name: create_firm
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/user/firm
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:multipart-form {
+  organizationName: ahsan's firm updated
+  email: ahsan.updated@gmail.com
+  phoneNumber: 03009998888
+  website: https://ahsanlawassociates.com
+  specialityIds: [2,3]
+  city: Karachi
+  postalCode: 75500
+  province: Sindh
+  fullAddress: Suite 12, 3rd Floor, Shahrah-e-Faisal
+  latitude: 24.8607
+  longitude: 67.0011
+  profilePhoto: @file(/C:/Users/E14/Pictures/Screenshots/Screenshot 2026-02-12 173415.png)
+  coverPhoto: @file(/C:/Users/E14/Pictures/Screenshots/Screenshot 2026-02-12 172227.png)
+}
+
+settings {
+  encodeUrl: true
+}

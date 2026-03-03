@@ -1,0 +1,19 @@
+meta {
+  name: RequestDetails
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/user/membership/benefits/request/38
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

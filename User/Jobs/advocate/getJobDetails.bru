@@ -1,0 +1,19 @@
+meta {
+  name: getJobDetails
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/advocate/job/:jobId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  jobId: 7
+}
+
+settings {
+  encodeUrl: true
+}

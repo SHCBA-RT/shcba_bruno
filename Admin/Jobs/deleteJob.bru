@@ -1,0 +1,19 @@
+meta {
+  name: deleteJob
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/admin/job/firm/:jobId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  jobId: 1
+}
+
+settings {
+  encodeUrl: true
+}

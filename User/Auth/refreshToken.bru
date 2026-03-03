@@ -1,0 +1,21 @@
+meta {
+  name: refreshToken
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/user/auth/refresh-token
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MjAxLCJpYXQiOjE3NjMxMTczMDAsImV4cCI6MTc2MzcyMjEwMH0.9EL6aFYVGikqXL4MtsGx3P_82CnJ8HLZ2SIkC3pGcNU"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

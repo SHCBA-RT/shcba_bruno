@@ -1,0 +1,19 @@
+meta {
+  name: getAdvocateById
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/advocate/advocates/179
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

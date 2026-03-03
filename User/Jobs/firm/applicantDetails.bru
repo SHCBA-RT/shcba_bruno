@@ -1,0 +1,21 @@
+meta {
+  name: applicantDetails
+  type: http
+  seq: 8
+}
+
+get {
+  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId/applicants/:applicantId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 111
+  jobId: 8
+  applicantId: 2
+}
+
+settings {
+  encodeUrl: true
+}

@@ -1,0 +1,29 @@
+meta {
+  name: removeFirmMember
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/api/user/firm-member/:firmId/remove-member
+  body: json
+  auth: bearer
+}
+
+params:path {
+  firmId: 111
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "advocateId": 275
+  }
+}
+
+settings {
+  encodeUrl: true
+}

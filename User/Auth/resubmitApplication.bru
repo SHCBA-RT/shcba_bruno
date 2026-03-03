@@ -1,0 +1,42 @@
+meta {
+  name: resubmitApplication
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{baseUrl}}/api/user/auth/resubmit
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  // {
+  //     "type": "advocate",
+  //     "firstName": "John",
+  //     "lastName": "Doe",
+  //     "email": "john@example.com",
+  //     "phoneNumber": "1234567890",
+  //     "sbcEnrollmentNo": "12905",
+  //     "specialityIds": [
+  //         1,
+  //         2
+  //     ]
+  // }
+  
+  
+  {
+    "type": "firm",
+    "organizationName": "Acme Legal",
+    "specialityIds": [3, 4]
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

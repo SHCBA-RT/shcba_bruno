@@ -1,0 +1,31 @@
+meta {
+  name: login
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/admin/auth/login
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "email": "admin@shcba.com",
+      "password": "12345678"
+  }
+}
+
+script:post-response {
+  const response = res.getBody();
+  
+  if (response.success) {
+      bru.setVar('SupeAdminToken', response.data.accessToken);
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

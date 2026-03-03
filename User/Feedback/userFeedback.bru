@@ -1,0 +1,26 @@
+meta {
+  name: userFeedback
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/feedback/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      "subject": "Profile Update Issue",
+      "message": "Unable to update my advocate license number in profile settings."
+  }
+}
+
+settings {
+  encodeUrl: true
+}

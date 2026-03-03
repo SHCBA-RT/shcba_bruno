@@ -1,0 +1,23 @@
+meta {
+  name: deleteAchievement
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/user/achievements/:id/delete
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

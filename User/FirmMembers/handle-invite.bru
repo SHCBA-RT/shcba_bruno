@@ -1,0 +1,25 @@
+meta {
+  name: handle-invite
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{accessToken}}/api/user/firm-member/handle-invite
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      
+  }
+}
+
+settings {
+  encodeUrl: true
+}

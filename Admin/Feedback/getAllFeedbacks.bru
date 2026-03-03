@@ -1,0 +1,26 @@
+meta {
+  name: getAllFeedbacks
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/admin/feedback?status=new
+  body: none
+  auth: bearer
+}
+
+params:query {
+  status: new
+  ~userType: firm
+  ~search: profile
+  ~type: App%20Performance
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+settings {
+  encodeUrl: true
+}

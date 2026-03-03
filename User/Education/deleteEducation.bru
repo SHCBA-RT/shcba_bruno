@@ -1,0 +1,23 @@
+meta {
+  name: deleteEducation
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{baseUrl}}/api/user/education/:id/delete
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 2
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

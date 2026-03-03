@@ -1,0 +1,27 @@
+meta {
+  name: saveFcmToken
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/notifications/save-fcm
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "advocateId": 6,
+    "fcmToken": "token_advocate_789"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

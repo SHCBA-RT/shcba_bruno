@@ -1,0 +1,19 @@
+meta {
+  name: getEducationByAdvocateId
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/api/user/education/
+  body: text
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+}

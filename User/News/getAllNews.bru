@@ -1,0 +1,40 @@
+meta {
+  name: getAllNews
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/news
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~page: 75
+  ~limit: 
+  ~search: concido
+  ~type: Event
+  ~sort: views
+  ~sort: priority
+  ~sort: date
+  ~order: desc
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+      // "sort": "views",
+      // "sort" : "date",
+      // "order": "dsc"
+      // "search": "concido"
+      "type": "Event"
+  }
+}
+
+settings {
+  encodeUrl: true
+}

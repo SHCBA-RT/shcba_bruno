@@ -1,0 +1,36 @@
+meta {
+  name: updatedNews
+  type: http
+  seq: 3
+}
+
+put {
+  url: {{baseUrl}}/api/admin/news/:id/update
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 77025caa-e55f-4b57-bd3c-6daae1dde970
+}
+
+auth:bearer {
+  token: {{userToken}}
+}
+
+body:json {
+  {
+      "title": "Updated Event Title",
+      "type": "Event",
+      "short_description": "Updated short description",
+      "content": "This is the updated content of the event.",
+      "attachments": ["event-brochure.pdf"],
+      "priority_level": 3,
+      "adminId": "2"
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+}

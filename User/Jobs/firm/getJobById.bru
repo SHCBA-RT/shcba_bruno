@@ -1,0 +1,20 @@
+meta {
+  name: getJobById
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{hostUrl}}/api/user/firm/job/:firmId/:jobId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 111
+  jobId: 7
+}
+
+settings {
+  encodeUrl: true
+}

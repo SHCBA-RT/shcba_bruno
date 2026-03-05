@@ -11,7 +11,7 @@ post {
 }
 
 auth:bearer {
-  token: {{userToken}}
+  token: {{accessToken}}
 }
 
 body:multipart-form {
@@ -20,9 +20,14 @@ body:multipart-form {
   schoolName: abcSchool
   classGrade: 2
   amountClaimed: 10000
-  documents: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-20 14-02-56.png)
+  requiredDoc: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-21 18-27-13.png)
+  paymentProof: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-22 15-47-08.png)
+  supportingDocs: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-23 11-14-33.png)
+  isReimbursement: true
+  ~documents: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-20 14-02-56.png)
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

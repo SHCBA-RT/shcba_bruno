@@ -16,7 +16,7 @@ params:query {
 }
 
 auth:bearer {
-  token: {{userToken}}
+  token: {{accessToken}}
 }
 
 body:multipart-form {
@@ -29,10 +29,14 @@ body:multipart-form {
   description: 
   isReimbursement: sss
   notes: sss
-  documents: @file(/home/bilal-zia/Documents/BSK-Server/BSK-TV-NETWORK/documentation/BackendFeatures.pdf)
-  ~isReimbursement: 
+  requiredDoc: @file(/home/bilal-zia/Downloads/DOMAIN AND THIER CATEGORIES DARFTING FORMATS Criminal Law.pdf)
+  paymentProof: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-21 18-09-33.png)
+  supportingDocs: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-21 18-32-21.png)
+  isReimbursement: true
+  ~documents: @file(/home/bilal-zia/Documents/BSK-Server/BSK-TV-NETWORK/documentation/BackendFeatures.pdf)
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

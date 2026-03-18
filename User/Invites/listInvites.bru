@@ -5,11 +5,20 @@ meta {
 }
 
 get {
-  url: 
+  url: {{baseUrl}}/api/user/invites?firmId=148
   body: none
-  auth: inherit
+  auth: bearer
+}
+
+params:query {
+  firmId: 148
+}
+
+auth:bearer {
+  token: {{accessToken}}
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

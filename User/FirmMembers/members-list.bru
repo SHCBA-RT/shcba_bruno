@@ -1,0 +1,30 @@
+meta {
+  name: members-list
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/user/firm-member/members?firmId=148
+  body: json
+  auth: bearer
+}
+
+params:query {
+  firmId: 148
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  // {
+  //   "firmId":148
+  // }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

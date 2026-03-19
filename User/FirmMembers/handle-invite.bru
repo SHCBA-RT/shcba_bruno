@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{accessToken}}/api/user/firm-member/handle-invite
+  url: {{baseUrl}}/api/user/firm-member/handleInvite
   body: json
   auth: bearer
 }
@@ -16,8 +16,8 @@ auth:bearer {
 
 body:json {
   {
-      action:"accepted",
-      inviteId:100
+      "action":"accepted",
+      "inviteId":23
   }
 }
 

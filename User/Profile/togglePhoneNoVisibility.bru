@@ -4,12 +4,19 @@ meta {
   seq: 2
 }
 
-get {
-  url: 
-  body: none
+put {
+  url: {{baseUrl}}/api/user/profile/toggle
+  body: json
   auth: inherit
+}
+
+body:json {
+  {
+   "isPhoneVisible":false
+  }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

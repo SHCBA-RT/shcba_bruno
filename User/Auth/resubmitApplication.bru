@@ -6,7 +6,7 @@ meta {
 
 post {
   url: {{baseUrl}}/api/user/auth/resubmit
-  body: json
+  body: multipartForm
   auth: bearer
 }
 
@@ -29,13 +29,32 @@ body:json {
   // }
   
   
-  {
-    "type": "firm",
-    "firmId" : 150, // firm id is required to 
-    "organizationName": "Acme Legal",
-    "specialityIds": [3, 4]
-  }
   
+  
+}
+
+body:multipart-form {
+  type: firm
+  organizationName: loyal firm
+  email: newFirm@testing.com
+  website: www.firm.com
+  phoneNumber: 2313213213
+  profilePhoto: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-22 17-01-37.png)
+  coverPhoto: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-10-25 17-37-37.png)
+  specialityIds: [1,2]
+  province: sindh
+  longitude: 98.02
+  latitude: 97.01
+  fullAddress: new address
+  city: karachi
+  postalCode: 75210
+  firmId: 151
+  ~type: advocate
+  ~firstName: ali
+  ~phoneNumber: 123123213123
+  ~sbcEnrollmentNo: 123213
+  ~specialityIds: [1,2]
+  ~lastName: ali
 }
 
 settings {

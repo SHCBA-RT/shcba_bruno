@@ -5,13 +5,13 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/advocate/advocates/:firmId
+  url: {{baseUrl}}/api/advocate/advocates/firm/:firmId
   body: none
   auth: bearer
 }
 
 params:path {
-  firmId: 3
+  firmId: 111
 }
 
 auth:bearer {
@@ -20,4 +20,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

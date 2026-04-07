@@ -27,13 +27,15 @@ body:json {
   {
       "firstName": "Ali",
       "lastName": "Co",
-      "email": "AliCo@example.com",
+      "email": "AliCo@2example.com",
       "phoneNumber": "03119876543",
-      "sbcEnrollmentNo": "03001",
+      "sbcEnrollmentNo": "03059",
       "organizationName": "Ali & Co",
       "password": "password123",
       "confirmPassword": "password123",
       "specialityIds": [1, 3]
+  //     "bio": "Test Bio",
+  //     "tagLine": "Test tagLine"
   }
   
   
@@ -53,4 +55,5 @@ script:post-response {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

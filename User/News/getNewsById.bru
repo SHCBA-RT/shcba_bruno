@@ -5,7 +5,7 @@ meta {
 }
 
 get {
-  url: {{hostUrl}}/api/user/news/:id
+  url: {{baseUrl}}/api/user/news/:id
   body: none
   auth: bearer
 }
@@ -20,4 +20,5 @@ auth:bearer {
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

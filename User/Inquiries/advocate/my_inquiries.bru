@@ -5,9 +5,16 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/user/advocate/inquiries/sent
-  body: none
+  url: {{baseUrl}}/api/user/advocate/inquiries/sent?order=desc&page=1&limit=2&isRead=true
+  body: json
   auth: bearer
+}
+
+params:query {
+  order: desc
+  page: 1
+  limit: 2
+  isRead: true
 }
 
 auth:bearer {

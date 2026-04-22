@@ -1,0 +1,28 @@
+meta {
+  name: recieved
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/user/firm/inquiries/:firmId?isRead=true
+  body: none
+  auth: bearer
+}
+
+params:query {
+  isRead: true
+}
+
+params:path {
+  firmId: 146
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

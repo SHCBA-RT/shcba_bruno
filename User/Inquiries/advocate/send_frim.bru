@@ -1,0 +1,28 @@
+meta {
+  name: send_frim
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/user/advocate/inquiries/to-firm
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "subject":"hello123",
+    "receiverId":146,
+    "message":"hello123"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

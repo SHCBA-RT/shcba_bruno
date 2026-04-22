@@ -1,0 +1,25 @@
+meta {
+  name: markAsRead
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/api/user/firm/inquiries/:firmId/:inquiryId/read
+  body: none
+  auth: bearer
+}
+
+params:path {
+  inquiryId: 5
+  firmId: 146
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

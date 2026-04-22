@@ -1,0 +1,28 @@
+meta {
+  name: sent_to_advocate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/user/advocate/inquiries/to-advocate
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:json {
+  {
+    "subject":"hello",
+    "receiverId":277,
+    "message":"hello"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

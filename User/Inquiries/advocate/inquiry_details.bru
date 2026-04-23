@@ -1,0 +1,25 @@
+meta {
+  name: inquiry_details
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{baseUrl}}/api/user/advocate/inquiries/:inquiryId/:type
+  body: none
+  auth: bearer
+}
+
+params:path {
+  type: sent
+  inquiryId: 4
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

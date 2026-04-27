@@ -1,0 +1,20 @@
+meta {
+  name: list
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/firm/firms/:firmId/gallery
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 146
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

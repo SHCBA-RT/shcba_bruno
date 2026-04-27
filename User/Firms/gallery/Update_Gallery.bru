@@ -1,0 +1,34 @@
+meta {
+  name: Update_Gallery
+  type: http
+  seq: 2
+}
+
+patch {
+  url: {{baseUrl}}/api/firm/firms/:firmId/gallery/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+  firmId: 146
+}
+
+body:json {
+  {
+    "images":[ 
+      {
+      "imageUrl":"https://storage.googleapis.com/shcba-stg.firebasestorage.app//cf7099b2-c4bc-4bf22-92e0-90a85a56421e.png",
+    "storagePath":"/cf7099b2-c4bc-4bf2-92e0-90a85a56421e.png"
+    }
+    ],
+    "title":"firm gallery"
+  
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

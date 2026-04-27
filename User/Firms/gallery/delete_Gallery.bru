@@ -1,0 +1,21 @@
+meta {
+  name: delete_Gallery
+  type: http
+  seq: 4
+}
+
+delete {
+  url: {{baseUrl}}/api/firm/firms/:firmId/gallery/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 146
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

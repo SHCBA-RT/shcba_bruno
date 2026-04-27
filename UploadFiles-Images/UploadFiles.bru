@@ -4,10 +4,22 @@ meta {
   seq: 1
 }
 
-get {
-  url: {{baseUrl}}/api/upload
-  body: none
-  auth: inherit
+post {
+  url: {{baseUrl}}/api/upload/images
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+body:multipart-form {
+  images: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-11-20 00-45-48.png)
+}
+
+body:file {
+  file: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2026-04-21 12-37-28.png) @contentType(image/png)
 }
 
 settings {

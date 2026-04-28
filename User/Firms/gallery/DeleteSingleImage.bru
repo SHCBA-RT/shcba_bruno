@@ -1,0 +1,22 @@
+meta {
+  name: DeleteSingleImage
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/firm/firms/:firmId/gallery/:galleryId/item/:itemId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  itemId: 6
+  galleryId: 1
+  firmId: 146
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,25 @@
+meta {
+  name: getById
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/api/firm/firms/:firmId/gallery/:galleryId
+  body: none
+  auth: bearer
+}
+
+params:path {
+  galleryId: 1
+  firmId: 146
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

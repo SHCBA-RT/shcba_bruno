@@ -1,0 +1,28 @@
+meta {
+  name: createAchivement
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/firm/firms/:firmId/achievement
+  body: json
+  auth: inherit
+}
+
+params:path {
+  firmId: 146
+}
+
+body:json {
+  {
+    "title": "achivment1123",
+    "description" : "my achviment", 
+     "achivementType" : "certficate" 
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

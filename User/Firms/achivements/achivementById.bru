@@ -1,0 +1,21 @@
+meta {
+  name: achivementById
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/api/firm/firms/:firmId/achievement/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  id: 1
+  firmId: 146
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

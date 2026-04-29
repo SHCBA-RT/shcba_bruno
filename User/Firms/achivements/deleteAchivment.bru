@@ -1,0 +1,21 @@
+meta {
+  name: deleteAchivment
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/firm/firms/:firmId/achievement/:id
+  body: none
+  auth: inherit
+}
+
+params:path {
+  firmId: 146
+  id: 1
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,27 @@
+meta {
+  name: updateStatus
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/api/firm/firms/:firmId/achievement/:id
+  body: json
+  auth: inherit
+}
+
+params:path {
+  id: 1
+  firmId: 146
+}
+
+body:json {
+  {
+    "isPublic" : true
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

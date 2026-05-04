@@ -1,0 +1,20 @@
+meta {
+  name: home
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/api/advocate/advocates/home
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{accessToken}}
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

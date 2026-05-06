@@ -12,7 +12,7 @@ put {
 
 params:path {
   firmId: 111
-  jobId: 8
+  jobId: 14
 }
 
 auth:bearer {
@@ -21,16 +21,26 @@ auth:bearer {
 
 body:json {
   {
-      "employmentType": "fulltime",
-      "description": "developer new",
-      "location": "karachi",
-      "salaryMin": "100000",
-      "salaryMax": "12000",
-      "status": "published",
-      "workplaceType": "remote"
+  //     "employmentType": "fulltime",
+  //     "description": "developer new",
+  //     "location": "karachi",
+  //     "salaryMin": "100000",
+  //     "salaryMax": "12000",
+  //     "status": "draft"
+  //     "workplaceType": "remote",
+          "coordinates":{
+            "lat":"11"
+          },
+          "responsibilities":[
+            "new123"
+          ],
+          "requirements":{
+            "experience":"6 years"
+          }
   }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

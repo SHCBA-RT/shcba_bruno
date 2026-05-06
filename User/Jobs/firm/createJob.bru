@@ -11,26 +11,40 @@ post {
 }
 
 params:path {
-  firmId: 108
+  firmId: 111
 }
 
 auth:bearer {
-  token: {{userToken}}
+  token: {{accessToken}}
 }
 
 body:json {
-  {
-               "employmentType" : "fulltime",
-              "title": "backend developer2",
-              "description":"developer new",
-              "location": "karachi",
-              "salaryMin": "100000" ,
-              "salaryMax": "120000",
-              "status": "published",
-              "workplaceType" : "remote"
-  }
+    {
+      "employmentType": "fulltime",
+      "title": "backend developer2",
+      "description": "developer new",
+      "location": "karachi",
+      "salaryMin": "100000",
+      "salaryMax": "120000",
+      "status": "published",
+      "workplaceType": "remote",
+      "requirements": {
+        "education": "LLB",
+        "experience": "5 years",
+        "skills": "  new skill"
+      },
+      "coordinates": {
+        "lat": "123",
+        "long": "124"
+      },
+      "responsibilities": [
+        "good advocate",
+        "experienced advocate"
+      ]
+    }
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

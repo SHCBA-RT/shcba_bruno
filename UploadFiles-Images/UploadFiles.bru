@@ -5,7 +5,7 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/upload/images
+  url: {{baseUrl}}/api/upload/cloudUpload
   body: multipartForm
   auth: bearer
 }
@@ -15,7 +15,7 @@ auth:bearer {
 }
 
 body:multipart-form {
-  images: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-11-20 00-45-48.png)
+  files: @file(/home/bilal-zia/Pictures/Screenshots/Screenshot from 2025-11-20 00-45-48.png)
 }
 
 body:file {

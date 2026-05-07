@@ -5,15 +5,20 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/user/advocate/job/:jobId
+  url: {{baseUrl}}/api/user/advocate/job/:jobId?isApplied=true
   body: none
   auth: inherit
 }
 
+params:query {
+  isApplied: true
+}
+
 params:path {
-  jobId: 7
+  jobId: 5
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }

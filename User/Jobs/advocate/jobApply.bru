@@ -5,8 +5,8 @@ meta {
 }
 
 post {
-  url: {{baseUrl}}/api/user/advocate/job/apply/2
-  body: multipartForm
+  url: {{baseUrl}}/api/user/advocate/job/apply/13
+  body: json
   auth: bearer
 }
 
@@ -14,8 +14,14 @@ auth:bearer {
   token: {{accessToken}}
 }
 
+body:json {
+  {
+    "resumUrl": "https://storage.googleapis.com/shcba-stg.firebasestorage.app/jobs/documents/aecc6697-7fc9-48e9-86cd-298031ba877a.pdf"
+  }
+}
+
 body:multipart-form {
-  resume: @file(/home/bilal-zia/Downloads/SHCBA_Membership_Flow.docx)
+  resume: @file(/home/bilal-zia/Downloads/(backup )Drafts and leg doc/post_arrest_bail_real_draft.pdf)
 }
 
 settings {

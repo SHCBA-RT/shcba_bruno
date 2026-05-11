@@ -1,0 +1,20 @@
+meta {
+  name: unapplyFromJob
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/api/user/advocate/job/unapply/:jobId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  jobId: 4
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

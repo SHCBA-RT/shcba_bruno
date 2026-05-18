@@ -5,16 +5,21 @@ meta {
 }
 
 get {
-  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId/applicants
+  url: {{baseUrl}}/api/user/firm/job/:firmId/:jobId/applicants?status=rejected
   body: none
   auth: inherit
 }
 
+params:query {
+  status: rejected
+}
+
 params:path {
   firmId: 111
-  jobId: 7
+  jobId: 13
 }
 
 settings {
   encodeUrl: true
+  timeout: 0
 }
